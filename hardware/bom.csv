@@ -1,0 +1,23 @@
+ref,component,specification,qty,role,status,note
+J1,Screw terminal,2-pin 5.08 mm pitch,1,12 V input,in hand,
+J2,Screw terminal,2-pin 5.08 mm pitch,1,coil output,in hand,
+Q1,MOSFET,IRLZ44N logic-level TO-220,1,power switch,in hand,letter L is mandatory: 3.3 V gate drive
+HS1,Heatsink,TO-220 20x15x10 mm,1,Q1 cooling,in hand,flange is at drain potential - do not ground
+D1,Schottky diode,1N5822 3 A / 40 V,1,flyback clamp,in hand,cathode stripe strictly to +12 V
+C1;C2,Electrolytic capacitor,470 uF 35 V low-ESR,2,rail decoupling,in hand,mounted at the coil end of the rail
+R1,Resistor,100 ohm 0.25 W 1%,1,gate series,in hand,limits gate charge current and ringing
+R2,Resistor,10 kohm 0.25 W 1%,1,gate pulldown,in hand,keeps Q1 off while the MCU boots
+R3-R6,Resistor,10 kohm 0.25 W 1%,4,ADC dividers 1:2,in hand,SS49E swings to 5 V; ADC tolerates 3.3 V
+U1,MCU board,ESP32-S3-DevKitC-1 (WROOM-1 N16R8),1,controller,in hand,GPIO 35/36/37 occupied by octal PSRAM
+U2,Current monitor,INA219 / CJMCU-219 0.1 ohm shunt,1,identification and logging,in hand,0.5 ms per I2C read - never inside the loop
+U3;U4,Hall sensor,SS49E linear TO-92,2,differential position sensing,in hand,no spares purchased - risk noted in docs/05
+L1,Electromagnet,JF-XP25x20 12 V 50 N pot-core,1,actuator,in hand,50 N is rated at zero gap on a flat plate
+BALL,Steel sphere,SHKh15 / AISI 52100 dia 10 mm,10,controlled object,in hand,4.09 g computed
+PSU,Power supply,12 V 3 A DC regulated,1,power,in hand,
+JACK,DC socket,5.5x2.5 mm DC-099,1,power inlet,in hand,
+PCB,Perfboard,double-sided 14x20 holes 2.54 mm,3,power stage,in hand,power stage is soldered - never on breadboard
+BB,Breadboard,830 tie points,2,logic and dividers,in hand,
+CER,Ceramic capacitor,0.1 uF 50 V X7R,10,SS49E decoupling,ordered,mounted at the sensor pins
+FUSE,Fuse + holder,3 A slow-blow,1,short-circuit protection,NOT ORDERED,required before first 12 V power-up
+STAND,Mechanical stand,rigid bracket for the magnet,1,fixes the 2.5 mm gap,NOT ORDERED,0.5 mm backlash is 20% of the working range
+BOLT,Steel bolt,M4 x 6-8 mm,2,pole extender (fallback B),NOT ORDERED,used if the field does not reach 2.5 mm

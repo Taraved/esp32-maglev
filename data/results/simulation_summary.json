@@ -1,0 +1,55 @@
+{
+  "plant": {
+    "m_g": 4.089306437422715,
+    "x0_mm": 2.5,
+    "i0_A": 0.25,
+    "pole_rad_s": 88.57381102786535,
+    "tau_ms": 11.290018893794688
+  },
+  "open_loop": {
+    "mae_float_duty": 0.002237224718555808,
+    "mae_int8_duty": 0.006924536544829607,
+    "max_int8_minus_float": 0.24356696009635925,
+    "train_mse_normalised": 0.00012202699872432277
+  },
+  "closed_loop": {
+    "PID": {
+      "stable": true,
+      "rms_um": 2.3587572226254667,
+      "rms_sd": 0.3382416272406379,
+      "settling_ms": 33.12500000000003,
+      "settling_sd": 0.33071891388307384,
+      "capture_mm": 1.7822265624999998
+    },
+    "MPC (float64, PC)": {
+      "stable": true,
+      "rms_um": 2.60933669801602,
+      "rms_sd": 0.23565058739116923,
+      "settling_ms": 17.750000000000014,
+      "settling_sd": 0.4330127018922193,
+      "capture_mm": 1.7822265624999998
+    },
+    "NN float32": {
+      "stable": true,
+      "rms_um": 2.678620417136444,
+      "rms_sd": 0.2537957738344848,
+      "settling_ms": 18.000000000000014,
+      "settling_sd": 0.0,
+      "capture_mm": 1.7663574218749998,
+      "bytes": 1412,
+      "macs": 320
+    },
+    "NN int8": {
+      "stable": true,
+      "rms_um": 3.5492783174775013,
+      "rms_sd": 0.6184570205310277,
+      "settling_ms": 17.625000000000014,
+      "settling_sd": 0.4841229182759271,
+      "capture_mm": 1.3156127929687498,
+      "bytes": 452,
+      "macs": 320
+    }
+  },
+  "n_params": 353,
+  "macs_per_step": 320
+}

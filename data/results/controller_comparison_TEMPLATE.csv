@@ -1,0 +1,31 @@
+# Protocol P5 — controller comparison on the bench / сравнение регуляторов на стенде
+#
+# The predicted column is filled from analysis/simulate_controllers.py BEFORE
+# the experiment is run. The measured column is filled afterwards. Recording
+# the prediction first is deliberate: it makes a disagreement visible instead
+# of letting the model be quietly adjusted to match whatever came out.
+#
+# Колонка predicted заполняется ДО эксперимента, measured - после. Порядок
+# принципиален: он делает расхождение видимым, а не позволяет подогнать модель.
+#
+# STATUS: predicted filled, measured EMPTY - the loop is not closed yet.
+# СТАТУС: predicted заполнено, measured ПУСТО - контур ещё не замкнут.
+controller,metric,unit,predicted,measured,n_runs,note
+PID,rms_hold_error,um,2.36,,,60 s window in steady state
+PID,settling_time,ms,33.1,,,to +/-50 um after a 50 mm/s impulse
+PID,step_time,us,,,,GPIO 17 pulse width on the scope
+MPC,rms_hold_error,um,2.61,,,PC only - does not fit the MCU
+MPC,settling_time,ms,17.8,,,
+MPC,step_time,ms,,,,measured on the PC, for reference
+NN float32,rms_hold_error,um,2.68,,,
+NN float32,settling_time,ms,18.0,,,
+NN float32,step_time,us,,,,
+NN float32,footprint,bytes,1412,1412,1,exact - counted from nn_float.h
+NN int8,rms_hold_error,um,3.55,,,
+NN int8,settling_time,ms,17.6,,,
+NN int8,step_time,us,,,,
+NN int8,footprint,bytes,452,452,1,exact - counted from nn_weights.h
+PID,capture_range,mm,1.782,,,by bisection on the initial offset
+MPC,capture_range,mm,1.782,,,
+NN float32,capture_range,mm,1.766,,,
+NN int8,capture_range,mm,1.316,,,the headline prediction to test

@@ -1,0 +1,40 @@
+# Protocol P3 — differential Hall pair calibration / калибровка дифференциальной пары
+#
+# One row per (gap, duty) cell. The ball is held at a known gap with a
+# non-magnetic gauge (feeler gauge or printed spacer) while the coil is driven
+# at a fixed duty. Both sweeps are needed:
+#   - varying gap at fixed duty  -> the calibration curve dU(x)
+#   - varying duty at fixed gap  -> the residual common-mode sensitivity to
+#     coil current, which is the quantity the differential pair exists to kill
+#
+# STATUS: EMPTY TEMPLATE. Not yet measured - the sensor bracket is not built.
+# СТАТУС: ПУСТОЙ ШАБЛОН. Ещё не измерено - кронштейн датчиков не собран.
+#
+# gap_mm      : commanded air gap, mm (gauge thickness)
+# duty        : LEDC duty, 0..2047
+# raw_a/raw_b : mean ADC counts over 16 oversamples, 25 repeats
+# diff        : raw_a - raw_b
+# sd_diff     : standard deviation of diff over the 25 repeats, counts
+# n           : number of repeats
+gap_mm,duty,raw_a,raw_b,diff,sd_diff,n
+1.0,0,,,,,25
+1.0,512,,,,,25
+1.0,1024,,,,,25
+1.5,0,,,,,25
+1.5,512,,,,,25
+1.5,1024,,,,,25
+2.0,0,,,,,25
+2.0,512,,,,,25
+2.0,1024,,,,,25
+2.5,0,,,,,25
+2.5,512,,,,,25
+2.5,1024,,,,,25
+3.0,0,,,,,25
+3.0,512,,,,,25
+3.0,1024,,,,,25
+3.5,0,,,,,25
+3.5,512,,,,,25
+3.5,1024,,,,,25
+4.0,0,,,,,25
+4.0,512,,,,,25
+4.0,1024,,,,,25

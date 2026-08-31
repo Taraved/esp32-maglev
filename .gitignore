@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+analysis/nn_weights.npz
+data/results/traces.npz

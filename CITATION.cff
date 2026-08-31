@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+title: >-
+  Closed-loop degradation of an int8-quantised neural controller
+  on an unstable magnetic levitation plant
+message: >-
+  If you refer to this work, please cite it using the metadata below.
+type: software
+authors:
+  - given-names: Svyatoslav
+    family-names: Nikulin
+    affiliation: >-
+      Ural Federal University, Department of Control Engineering
+      (programme 27.03.04 Control in Technical Systems)
+    email: svyatik.super@gmail.com
+repository-code: 'https://github.com/Taraved'
+abstract: >-
+  An open hardware test bench and measurement protocol for quantifying how
+  much closed-loop control quality is lost when a neural controller trained
+  to imitate model predictive control is quantised from float32 to int8 and
+  executed on a microcontroller. The plant is a magnetic levitation rig built
+  around a pot-core holding electromagnet, whose field topology restricts the
+  working air gap to 2-3 mm and therefore raises the unstable pole to
+  88.6 rad/s, forcing a 1 kHz control loop. The repository contains the
+  hardware design, the firmware, the simulation pipeline and a measurement
+  protocol registered before the corresponding experiments were run.
+keywords:
+  - magnetic levitation
+  - model predictive control
+  - neural network control
+  - int8 quantisation
+  - TinyML
+  - embedded control
+  - ESP32-S3
+license: MIT
+version: 0.2.0
+date-released: '2026-08-31'

@@ -1,0 +1,5 @@
+controller,rms_error_um,rms_sd_um,settling_ms,settling_sd_ms,capture_range_mm,params_bytes,macs
+PID,2.36,0.34,33.1,0.3,1.782,,
+MPC (float64, PC),2.61,0.24,17.8,0.4,1.782,,
+NN float32,2.68,0.25,18.0,0.0,1.766,1412,320
+NN int8,3.55,0.62,17.6,0.5,1.316,452,320
