@@ -3,10 +3,10 @@
 **A magnetic levitation testbed for measuring how much control quality a
 neural controller loses when its arithmetic drops from float32 to int8.**
 
-Svyatoslav Nikulin · Ural Federal University, Control Engineering (27.03.04)
+Svyatoslav Nikulin · 2nd-year B.Sc. student in Control Engineering, Ural Federal University
 · [Русская версия](README.ru.md)
 
-![Test bench](docs/figures/bench_annotated_en.jpg)
+![Components and layout](docs/figures/bench_annotated_en.jpg)
 
 ---
 
@@ -14,10 +14,10 @@ Svyatoslav Nikulin · Ural Federal University, Control Engineering (27.03.04)
 
 | Phase | State |
 |---|---|
-| 1. Actuator characterisation and design | **complete** — see [findings](#result-1-the-actuator-decides-the-control-problem) |
-| 2. Hardware build | **complete except the position sensor** — power stage soldered and wired, see Fig. 1 |
-| 3. Position sensing and calibration | **in progress** |
-| 4. Closed-loop levitation and measurement | **in progress** |
+| 1. Actuator characterisation and plant modelling | **complete** — see [findings](#3-result-1--the-actuator-decides-the-control-problem) |
+| 2. Controller design and int8 quantisation simulation | **complete** — see [simulation results](#4-result-2--simulated-cost-of-int8) |
+| 3. Hardware schematics, BOM and component selection | **complete** — components acquired, see [system design](#5-system) |
+| 4. Physical testbed assembly and bench measurements | **planned / pending assembly** |
 
 The measurement protocol in [`docs/03`](docs/03-measurement-protocol.md) was
 written and the predictions recorded *before* the corresponding experiments,
